@@ -1,0 +1,789 @@
+{
+  "component.nav.onekey.app": {
+    "string": "Wallet App"
+  },
+  "component.nav.onekey.app.advantage": {
+    "string": "The industry's advanced HD on-chain wallet, with private keys in your own hands, is easy to use and secure, so even a novice can easily get started."
+  },
+  "component.nav.onekey.browserextension": {
+    "string": "浏览器插件"
+  },
+  "component.nav.onekey.browserextension.advantage": {
+    "string": "完美兼容 Chrome, Firefox 等主流浏览器，畅快 DeFi 体验。"
+  },
+  "component.nav.onekey.contact.us": {
+    "string": "联系我们"
+  },
+  "component.nav.onekey.getstartvidio": {
+    "string": "查看上手视频"
+  },
+  "component.nav.onekey.hardware": {
+    "string": "硬件设备"
+  },
+  "component.nav.onekey.hardware.advantage": {
+    "string": "离线冷存储你的加密资产，物理隔离病毒软件或木马。私钥不触网，软硬件全开源，放心用。"
+  },
+  "components.footer.ad": {
+    "string": "广告"
+  },
+  "components.footer.app": {
+    "string": "手机钱包"
+  },
+  "components.footer.brand.materialy": {
+    "string": "品牌素材"
+  },
+  "components.footer.browserExtension": {
+    "string": "浏览器插件"
+  },
+  "components.footer.business.cooperation": {
+    "string": "商务合作"
+  },
+  "components.footer.currency": {
+    "string": "货币"
+  },
+  "components.footer.email.address": {
+    "string": "邮箱地址"
+  },
+  "components.footer.email.input.placeholder": {
+    "string": "输入您的邮件地址"
+  },
+  "components.footer.encrypted.assets": {
+    "string": "加密资产"
+  },
+  "components.footer.hardware": {
+    "string": "硬件设备"
+  },
+  "components.footer.language": {
+    "string": "语言"
+  },
+  "components.footer.language.and.currency": {
+    "string": "语言&货币"
+  },
+  "components.footer.opensource.community": {
+    "string": "开源社区"
+  },
+  "components.footer.privacy.agreement": {
+    "string": "隐私协议"
+  },
+  "components.footer.product": {
+    "string": "产品"
+  },
+  "components.footer.resource": {
+    "string": "资源"
+  },
+  "components.footer.sales.alliance": {
+    "string": "销售联盟"
+  },
+  "components.footer.status": {
+    "string": "系统状态"
+  },
+  "components.footer.submit.dapp": {
+    "string": "提交 Dapp"
+  },
+  "components.footer.submit.token": {
+    "string": "提交 Token"
+  },
+  "components.footer.subscription": {
+    "string": "订阅我们的推送(建议你使用匿名性较高的邮箱，最好不用使用此邮件地址购买OneKey，我们也会定期销毁订单信息)"
+  },
+  "components.footer.subscription.discount": {
+    "string": "及时获取最新的 OneKey 优惠信息"
+  },
+  "components.footer.subscription.submit": {
+    "string": "订阅"
+  },
+  "components.footer.team": {
+    "string": "团队"
+  },
+  "components.footer.user.agreement": {
+    "string": "用户协议"
+  },
+  "components.introduction.contract.us": {
+    "string": "还是没搞懂？联系我们的<a>客服</a>"
+  },
+  "components.introduction.page.download": {
+    "string": "免费下载"
+  },
+  "components.introduction.page.subtitle": {
+    "string": "您可以在 OneKey 钱包进行 { type } 的转账、收款、存储与交易。"
+  },
+  "components.introduction.page.title": {
+    "string": "安全好用的{ type }钱包"
+  },
+  "components.nav.app.get.started": {
+    "string": "App 新手指南"
+  },
+  "components.nav.app.get.started.description": {
+    "string": "从零到一迅速上手，你可能会遇到的绝大部分问题都能在这里找到答案。"
+  },
+  "components.nav.download": {
+    "string": "下载"
+  },
+  "components.nav.free.download": {
+    "string": "免费下载"
+  },
+  "components.nav.hardware.manual": {
+    "string": "硬件钱包手册"
+  },
+  "components.nav.hardware.manual.description": {
+    "string": "从激活到备份，以及相当数量的疑难杂症的药方，别担忧，这份手册就是为了帮你获得从容使用硬件的自信。"
+  },
+  "components.nav.have.a.problem": {
+    "string": "遇到问题？<a>提交工单</a>"
+  },
+  "components.nav.helpCenter": {
+    "string": "帮助中心"
+  },
+  "components.nav.latest.announcement": {
+    "string": "最新公告"
+  },
+  "components.nav.more": {
+    "string": "更多"
+  },
+  "components.nav.production": {
+    "string": "产品"
+  },
+  "components.nav.shop": {
+    "string": "商店"
+  },
+  "components.nav.view.all": {
+    "string": "查看全部"
+  },
+  "fixtures.advantages.desc1": {
+    "string": "Seeds created by OneKey are stored locally and encrypted so that only you can decrypt them."
+  },
+  "fixtures.advantages.desc2": {
+    "string": "OneKey does not store any of the user's private data; the crypto assets are completely under your control."
+  },
+  "fixtures.advantages.desc3": {
+    "string": "Enjoy a smoother user experience with security without losing convenience."
+  },
+  "fixtures.advantages.desc4": {
+    "string": "OneKey does not store any of the user's private data; the crypto assets are completely under your control."
+  },
+  "fixtures.advantages.desc5": {
+    "string": "The hottest DApps are here, so have fun exploring!"
+  },
+  "fixtures.advantages.desc6": {
+    "string": "OneKey supports multi-signature wallets for nearly 1,000 tokens, making it easy for multiple people to manage assets together."
+  },
+  "fixtures.advantages.desc7": {
+    "string": "Powerful and convenient wallet type with one helper word to derive all public chains."
+  },
+  "fixtures.advantages.desc8": {
+    "string": "Nearly 1,000 on-chain assets in one easy-to-use wallet"
+  },
+  "fixtures.advantages.desc9": {
+    "string": "Works with OneKey hardware wallet. Never touch the Internet, safer offline storage of assets."
+  },
+  "fixtures.advantages.title1": {
+    "string": "Key Manage"
+  },
+  "fixtures.advantages.title2": {
+    "string": "Data Security"
+  },
+  "fixtures.advantages.title3": {
+    "string": "Easy to use"
+  },
+  "fixtures.advantages.title4": {
+    "string": "Convenient Pay and Receive"
+  },
+  "fixtures.advantages.title5": {
+    "string": "DApp Eco-portal"
+  },
+  "fixtures.advantages.title6": {
+    "string": "Multi-Sig Wallet"
+  },
+  "fixtures.advantages.title7": {
+    "string": "HD Root Wallet"
+  },
+  "fixtures.advantages.title8": {
+    "string": "Multi-chain Support"
+  },
+  "fixtures.advantages.title9": {
+    "string": "Hardware Wallet Backup"
+  },
+  "fixtures.coins.btc.how": {
+    "string": "How does Bitcoin work?"
+  },
+  "fixtures.coins.btc.how.answer": {
+    "developer_comment": "| 符号是代码用来标记换行的, 请在翻译结果中保留",
+    "string": "Bitcoin is a truly decentralized digital currency, which makes it unlike any other asset that has come along before. | The emergence of Bitcoin revolutionized digital currencies by decentralizing the bookkeeping process. The Bitcoin network itself does not play the role of a bookkeeper; instead, it shares user account balances and transaction information in an anonymous form to users around the world. This means that anyone who wants to participate in the Bitcoin protocol can download and run the free open source software required. | Bitcoin works by ensuring that this shared ledger can be continually accumulated: new transactions are verified, recorded, and then added to the ledger in order. Adding new \"blocks of information\" to an already existing blockchain is the heart of blockchain technology."
+  },
+  "fixtures.coins.btc.store": {
+    "string": "How do I store Bitcoins?"
+  },
+  "fixtures.coins.btc.store.answer": {
+    "developer_comment": "| 符号是代码用来标记换行的, 请在翻译结果中保留",
+    "string": "You can store your bitcoins in a bitcoin wallet. Bitcoin wallets come in two forms - hot wallets and cold wallets. A hot wallet refers to wallet software that is networked, i.e., stores bitcoins online. Hot wallets are more convenient for transactions, but logically, they are more vulnerable to attacks because they are connected to the Internet. | Cold wallets are \"offline\" wallets. This form of offline storage is effective in preventing hackers from attacking. However, because cold wallets are expensive and require more technical knowledge to operate, they are also significantly less convenient for users. Hardware wallets and paper wallets are both cold wallets."
+  },
+  "fixtures.coins.btc.what": {
+    "string": "What is Bitcoin"
+  },
+  "fixtures.coins.btc.what.answner": {
+    "developer_comment": "| 符号是代码用来标记换行的, 请在翻译结果中保留",
+    "string": "Bitcoin is a completely decentralized digital currency. Unlike the U.S. dollar, you can't hold it in your hand or deposit it in a bank. Bitcoin runs on a peer-to-peer network where people can send and receive bitcoins without an intermediary (such as a bank, central bank, or payment institution). In fact, no centralized institution or payment system can control bitcoin. | Bitcoin is the first ever cryptocurrency, and on October 31, 2008, someone (or a group of people) published the famous Bitcoin white paper under the name \"Satoshi Nakamoto\". | The first line of the white paper reads, \"A true peer-to-peer electronic cash should allow payments to be made directly online from the originator to the other party, without going through a third-party financial service provider. | The Bitcoin network was officially launched on January 2009, marking the beginning of the cryptocurrency revolution."
+  },
+  "fixtures.coins.dot.how": {
+    "string": "How does Polka work?"
+  },
+  "fixtures.coins.dot.how.answer": {
+    "developer_comment": "| 符号是代码用来标记换行的, 请在翻译结果中保留",
+    "string": "Polkadot's massive interoperability through a set of common validators helps protect its multiple blockchains and allows them to scale transactions by distributing data across many parallel chains | Polkadot's network uses the NPOS (nominated proof of interest) mechanism to select validators and nominators and maximize chain security | Unique validity scheme allows chains to interact securely under the same rules, but with mostly independent control."
+  },
+  "fixtures.coins.dot.store": {
+    "string": "How do I store polkadot?"
+  },
+  "fixtures.coins.dot.store.answer": {
+    "string": "You can store it in a cold wallet or a hot wallet."
+  },
+  "fixtures.coins.dot.what": {
+    "string": "What is Polkadot"
+  },
+  "fixtures.coins.dot.what.answer": {
+    "developer_comment": "| 符号是代码用来标记换行的, 请在翻译结果中保留",
+    "string": "The DOT, also known as Polkadot, was founded in 2015 by Dr. Gavin Wood, one of the founders of Ether and the creator of the Ether Yellow Book. The Polkadot project is currently managed by Parity. | DOT coin is the native token of Polkadot platform, DOT distribution: DOT coin will not be available until the main network release, which is expected by the end of 2019. In the meantime, you can get test outlets to interact with testnet. Navigate to testnet and click on \"Create an Account\". |It is expected that 10 million DOT coins will be available as part of the Polkadot Genesis block. 5 million DOT coins will be available for sale in the fall of 2017."
+  },
+  "fixtures.coins.eth.feature": {
+    "string": "What are the features of Ethereum?"
+  },
+  "fixtures.coins.eth.feature.answer": {
+    "developer_comment": "| 符号是代码用来标记换行的, 请在翻译结果中保留",
+    "string": "Developers can build DApps on the Ether platform, and DApps are used for a wide range of purposes, from creating new types of digital assets, to censorship-resistant web applications, to decentralized autonomous organizations, and more. | Ether is the local currency of the Ether blockchain and is also used as a digital currency that can be sent instantly to anyone in the world. Ether can be used both as a payment method and as a store of value."
+  },
+  "fixtures.coins.eth.how": {
+    "string": "How does the Ethereum work?"
+  },
+  "fixtures.coins.eth.how.answer": {
+    "developer_comment": "| 符号是代码用来标记换行的, 请在翻译结果中保留",
+    "string": "In 2013, Vitalik Buterin conceived of Ether, with the idea of making it an open source blockchain platform distinct from Bitcoin, and so smart contracts were born. On the Ether blockchain, a smart contract is like a self-running computer program that executes automatically when certain conditions are met. The blockchain enables the moving smart contract code to run exactly as programmed, thus avoiding downtime, censorship, fraud or third-party interference. | The ethereum network went live on July 30, 2015 with 73 million ethereum pre-mined."
+  },
+  "fixtures.coins.eth.obtain": {
+    "string": "How do I get Ether?"
+  },
+  "fixtures.coins.eth.obtain.answer": {
+    "developer_comment": "| 符号是代码用来标记换行的, 请在翻译结果中保留",
+    "string": "If you do not want to engage in Ether mining (mining is very expensive unless you are a professional miner), you can buy Ether coins on cryptocurrency exchanges. Click on the Trading Pairs tab for the latest trading pairs and exchange coin lists for Ether. Be sure to do your research carefully before choosing an exchange. You can also store Ether on an exchange or in a hot or cold wallet."
+  },
+  "fixtures.coins.eth.what": {
+    "string": "What is Ethereum"
+  },
+  "fixtures.coins.eth.what.answer": {
+    "developer_comment": "| 符号是代码用来标记换行的, 请在翻译结果中保留",
+    "string": "Ethereum is a smart contract platform that allows developers to build decentralized applications (DApps) on the Ether blockchain. Ether is the native digital currency of the Ether platform. | Ether is funded in part by the Ether Foundation, a non-profit organization under the Ether ecosystem. The Ether ecosystem also includes many joint ventures, such as the Ether Enterprise Alliance."
+  },
+  "fixtures.coins.ltc.store": {
+    "string": "How do I store Litecoin?"
+  },
+  "fixtures.coins.ltc.store.answer": {
+    "string": "You can store it in a cold wallet or a hot wallet."
+  },
+  "fixtures.coins.ltc.what": {
+    "string": "What is Litecoin"
+  },
+  "fixtures.coins.ltc.what.answer": {
+    "developer_comment": "| 符号是代码用来标记换行的, 请在翻译结果中保留",
+    "string": "Litecoin is a peer-to-peer cryptocurrency created by former Google employee Charlie Lee in 2011. LiteCoin was created based on the Bitcoin protocol, but differs from Bitcoin in its hashing algorithm, hard cap, block transaction times, and some other factors. on October 7, 2011, LiteCoin completed its release on an open source client on GitHub, and five days later, on October 13, the LiteCoin network went live. | Lee created Litecoin with the intention of creating a streamlined version of Bitcoin. Litecoin developers often say that Bitcoin is gold and Litecoin is silver. Litecoin differs from Bitcoin in terms of transaction confirmation speed, with blocks coming out roughly once every two and a half minutes. However, due to network congestion, users may have to wait about half an hour for their transactions to be processed. | LiteCoin is already accepted by many merchants, and you can check the updated list on the LiteCoin Foundation website."
+  },
+  "fixtures.questions.answer1": {
+    "developer_comment": "| 符号是代码用来标记换行的, 请在翻译结果中保留",
+    "string": "From 2011 to now, there have been a large number of centralized platforms that were hacked and hundreds of millions of crypto assets worth of money disappeared, such as Mt. | Please keep in mind that as long as you don't have the private key, the coins are not yours. Any platform (wallet, exchange) where you do not hold your private key is centralized and there is a possibility of single point of failure. Therefore, keeping your private key is the way to go. Even if you are now trying to make it convenient to hold your assets in a centralized platform, sooner or later you will have to keep your private key yourself. | As long as you take good care of them, no one, organization or hacker can take the coins away from you. As long as you keep them safe, no one, organization or hacker will be able to take the coins away from you. | Your assets are safe and sound, and you can rest easy every day."
+  },
+  "fixtures.questions.answer2": {
+    "developer_comment": "| 符号是代码用来标记换行的, 请在翻译结果中保留",
+    "string": "Many people are reluctant to keep their own private keys, in reality they are afraid that they will lose their coins and that no one will help them recover their assets. In fact, this is all the psychological shadow left by crappy and hard-to-use software, and you have chosen the wrong product. | Our responsibility and motivation is to make the safekeeping of crypto assets effortless and secure, so that even the elderly and children can easily get started. | OneKey encrypts everything that can be encrypted using the industry's most advanced algorithms, you heard that right, everything. Your private keys and mnemonics are kept locally, so no one can access them except you. | This software is a great way to get started."
+  },
+  "fixtures.questions.answer3": {
+    "developer_comment": "| 符号是代码用来标记换行的, 请在翻译结果中保留",
+    "string": "We're not afraid to open source the details of our product, and we don't care if competitors imitate and copy it to take over our users. | We initially learned a lot of valuable knowledge from Trezor, and now we are giving back to the community what we know and have learned in the form of open source. | We don't have a better explanation than others for how to define a crypto wallet. But the complete open source of the software, hardware, circuit board and even the 3D structural model of the shell proves that we are confident that we have a better answer to the question the world is asking."
+  },
+  "fixtures.questions.answer4": {
+    "developer_comment": "| 符号是代码用来标记换行的, 请在翻译结果中保留",
+    "string": "Too many Internet companies take privacy for granted; too many users take selling their privacy for granted. | But it doesn't have to be that way. | You can even define your own nodes, servers, block browsers, etc., to synchronize data without going through the OneKey server. | We don't mine or sell your personal data, we're not interested in your data. Our business model is simple, provide valuable services and products (including hardware) and charge our customers for them, that's the only way we make money. | Use our products in a way that makes you feel comfortable."
+  },
+  "fixtures.questions.answer5": {
+    "developer_comment": "| 符号是代码用来标记换行的, 请在翻译结果中保留",
+    "string": "I know that you have many concerns before using a company's product, such as what to do if it goes out of business. If there is a choice, there is no doubt that people will give preference to the big players. | We are not a startup, as a team incubated by Coinsign, the former has been running steadily for over 7 years and has a reputation in the industry. | We have made it our goal to stabilize our financial status and continue to make profits in exchange for business independence and decent standing to make money. | So don't worry about us, your assets are in your own hands and are not affected by the state of OneKey's operations. If we were to put a date on our year of service, I'd like it to be the day we run out of IPv6 addresses worldwide."
+  },
+  "fixtures.questions.answer6": {
+    "developer_comment": "| 符号是代码用来标记换行的, 请在翻译结果中保留",
+    "string": "That's right, you don't need to provide any information such as ID, passport, real name, etc. You are completely anonymous and completely free. We do not (and cannot) impose any restrictions on the use of OneKey, so please feel free to use it as you see fit."
+  },
+  "fixtures.questions.title1": {
+    "string": "Why should you keep your own private key?"
+  },
+  "fixtures.questions.title2": {
+    "string": "Safety doesn't mean trouble."
+  },
+  "fixtures.questions.title3": {
+    "string": "Open source, really."
+  },
+  "fixtures.questions.title4": {
+    "string": "You're privacy conscious, and so are we."
+  },
+  "fixtures.questions.title5": {
+    "string": "We want to serve you to the end of the Internet."
+  },
+  "fixtures.questions.title6": {
+    "string": "No KYC, no personal information required, no permission required."
+  },
+  "pages.download.android.apk.version": {
+    "string": "安装包 APK"
+  },
+  "pages.download.android.playStore.download": {
+    "string": "下载 Google PlayStore 版"
+  },
+  "pages.download.android.playStore.features1": {
+    "string": "功能全面"
+  },
+  "pages.download.android.playStore.features2": {
+    "string": "PlayStore 自动更新"
+  },
+  "pages.download.android.playStore.features3": {
+    "string": "Google 审核较松，全功能支持"
+  },
+  "pages.download.android.playStore.features4": {
+    "string": "适合能够正常访问 Google PlayStore 的用户"
+  },
+  "pages.download.android.playStore.scope": {
+    "string": "Google PlayStore 版适合海外用户"
+  },
+  "pages.download.android.playStore.version": {
+    "string": "Google PlayStore 版"
+  },
+  "pages.download.android.sdk.download": {
+    "string": "下载 APK 安装包"
+  },
+  "pages.download.android.sdk.features1": {
+    "string": "功能全面"
+  },
+  "pages.download.android.sdk.features2": {
+    "string": "更新及时，支持热更新"
+  },
+  "pages.download.android.sdk.features3": {
+    "string": "无需 Google 账户"
+  },
+  "pages.download.android.sdk.features4": {
+    "string": "适合中国大陆地区用户"
+  },
+  "pages.download.android.sdk.scope": {
+    "string": "APK 安装包适合中国大陆用户"
+  },
+  "pages.download.attention": {
+    "string": "注意"
+  },
+  "pages.download.ios.appstore.download": {
+    "string": "下载 Appstore 版"
+  },
+  "pages.download.ios.appstore.features1": {
+    "string": "功能相对稳定"
+  },
+  "pages.download.ios.appstore.features2": {
+    "string": "Appstore 自动更新，不用担心失效"
+  },
+  "pages.download.ios.appstore.features3": {
+    "string": "Apple 审核政策较严格，部分功能无法上架"
+  },
+  "pages.download.ios.appstore.features4": {
+    "string": "适合有非中国大陆区 Apple ID 的用户（香港、台湾亦可）"
+  },
+  "pages.download.ios.appstore.scope": {
+    "string": "Appstore 版适合海外用户"
+  },
+  "pages.download.ios.appstore.version": {
+    "string": "AppStore 版"
+  },
+  "pages.download.ios.testflight.download": {
+    "string": "下载 TestFlight 公测版"
+  },
+  "pages.download.ios.testflight.features1": {
+    "string": "功能最全面"
+  },
+  "pages.download.ios.testflight.features2": {
+    "string": "更新及时，新版本审核时间通常较短"
+  },
+  "pages.download.ios.testflight.features3": {
+    "string": "无需海外 Apple ID"
+  },
+  "pages.download.ios.testflight.features4": {
+    "string": "适合中国大陆地区用户"
+  },
+  "pages.download.ios.testflight.scope": {
+    "string": "TestFlight 公测版适合中国大陆用户"
+  },
+  "pages.download.ios.testflight.version": {
+    "string": "TestFlight 公测版"
+  },
+  "pages.download.minimum.supported.system.version": {
+    "string": "最低支持系统版本"
+  },
+  "pages.download.minimum.supported.system.version.android": {
+    "string": "Android 8.0及以上。"
+  },
+  "pages.download.minimum.supported.system.version.iOS": {
+    "string": "iOS 11.0 及以上。"
+  },
+  "pages.download.preference.choice.needed": {
+    "string": "选择你需要的 { type } 版本"
+  },
+  "pages.download.preference.choice.provided": {
+    "string": "我们针对不同用户偏好提供以下选择"
+  },
+  "pages.download.selectors.switcher": {
+    "string": "下载 OneKey 客户端"
+  },
+  "pages.download.system.support": {
+    "string": "目前支持 iOS 与 Android 系统"
+  },
+  "pages.download.title": {
+    "string": "Download OneKey App"
+  },
+  "pages.home.contact.724.support": {
+    "string": "7/24 客户支持团队"
+  },
+  "pages.home.contact.enter.helpCenter": {
+    "string": "进入帮助中心"
+  },
+  "pages.home.contact.oncall": {
+    "string": "我们随时待命"
+  },
+  "pages.home.contact.when.encounter.difficulties": {
+    "string": "任何关于 OneKey App 或硬件的疑问，欢迎在我们的帮助中心搜索一下，很有可能你的问题已经有现成解决办法了。如果还是无法解决，欢迎给我们提工单，我们通常会在24小时内完成回复并帮你解决。"
+  },
+  "pages.home.cta.download": {
+    "string": "免费下载"
+  },
+  "pages.home.cta.guide": {
+    "string": "新手指南"
+  },
+  "pages.home.cta.ready": {
+    "string": "准备好了吗？"
+  },
+  "pages.home.cta.start": {
+    "string": "今天就开始使用 OneKey 钱包。"
+  },
+  "pages.home.description": {
+    "string": "Easy to use and secure crypto wallet, manage your crypto asset with confidence. "
+  },
+  "pages.home.faq.title": {
+    "string": "常见问题"
+  },
+  "pages.home.feature.desc": {
+    "string": "配料表成分干净、清楚是产品的美德"
+  },
+  "pages.home.feature.item1.desc": {
+    "string": "如果一个钱包不开源它的代码，你很可能担心它藏有后门，危害你的资产安全。我们的代码完全公开托管在<a>Github</a>，任何人都可以检查或使用我们的代码。"
+  },
+  "pages.home.feature.item1.title": {
+    "string": "软件代码开源"
+  },
+  "pages.home.feature.item2.desc": {
+    "string": "我们同时使用了安全芯片（SE）和通用芯片来制作硬件钱包。同样的，从 3D 源文件到 PCB 电路板，以及最重要的，固件源代码，都可以在我们的<a>代码仓库</a>，中找到。"
+  },
+  "pages.home.feature.item2.title": {
+    "string": "固件代码开源"
+  },
+  "pages.home.feature.item3.desc": {
+    "string": "通过 OneKey 创建的钱包助记词、Seed 均加密存储在本地，只有您能解密信息，我们的服务器不会、也无法存储用户的任何私密数据。不再有中心化机构的介入，加密资产完全由您自己掌控。"
+  },
+  "pages.home.feature.item3.title": {
+    "string": "私钥自己掌控"
+  },
+  "pages.home.feature.item4.desc": {
+    "string": "我们选择和用户一起成长，而不是资本。通过各类渠道对我们的建议，都会被听到。受制于人手，并不是所有的需求都能被满足，但我们会尽可能给出当下的最优解。"
+  },
+  "pages.home.feature.item4.title": {
+    "string": "倾听社区的意见"
+  },
+  "pages.home.feature.item5.desc": {
+    "string": "我们的客服7/24响应，推荐你使用<a>工单</a>来提交问题。它们中的绝大多数都能在24小时内得到妥善解决。"
+  },
+  "pages.home.feature.item5.title": {
+    "string": "贴心的客户支持"
+  },
+  "pages.home.feature.item6.desc": {
+    "string": "你可以在 App 中自行更改节点、服务器、区块浏览器，偏好设置皆存在本地。OneKey 的服务器不会存储用户的任何私密数据，也不觊觎用户的个人信息。"
+  },
+  "pages.home.feature.item6.title": {
+    "string": "隐私是头等大事"
+  },
+  "pages.home.feature.item7.desc": {
+    "string": "我们努力降低小白上手的门槛。如果你甚至可以放心的把它推荐给你的长辈，那是对我们工作最大的褒奖。"
+  },
+  "pages.home.feature.item7.title": {
+    "string": "小白也能轻易上手"
+  },
+  "pages.home.feature.item8.desc": {
+    "string": "我们提供优秀的产品，创造一流的体验，提供完善的服务，敲定厚道的价格，赚取合理的利润。就是这么简单。"
+  },
+  "pages.home.feature.item8.title": {
+    "string": "体面的赚钱"
+  },
+  "pages.home.feature.title": {
+    "string": "真开源，才敢用。"
+  },
+  "pages.home.hardware.desc": {
+    "string": "从普通用户到专业投资者，一个称心得手的硬件钱包是妥妥的防守利器。"
+  },
+  "pages.home.hardware.onekey.adv": {
+    "string": "优点"
+  },
+  "pages.home.hardware.onekey.adv.items1": {
+    "string": "认证安全芯片 CC EAL 4+ 及 CC EAL 6+"
+  },
+  "pages.home.hardware.onekey.adv.items2": {
+    "string": "完整的线上支持手册和教程"
+  },
+  "pages.home.hardware.onekey.adv.items3": {
+    "string": "全球免费寄送"
+  },
+  "pages.home.hardware.onekey.adv.items4": {
+    "string": "无二次销售，退回商品全部销毁处理"
+  },
+  "pages.home.hardware.onekey.buy": {
+    "string": "购买"
+  },
+  "pages.home.hardware.onekey.desc": {
+    "string": "全开源软硬件架构，对小白用户友好。完美适配 MetaMask 等钱包，DeFi 挖矿收菜两相宜。"
+  },
+  "pages.home.hardware.onekey.know.our.privacy.policy": {
+    "string": "了解我们的隐私政策"
+  },
+  "pages.home.hardware.onekey.price": {
+    "string": "¥399<span>元</span>"
+  },
+  "pages.home.hardware.onekey.secret.protection": {
+    "string": "我们定期销毁用户订单邮件等隐私信息"
+  },
+  "pages.home.hardware.onekey.title": {
+    "string": "OneKey 硬件钱包"
+  },
+  "pages.home.hardware.onekey.welfare": {
+    "string": "老用户福利<span>(早鸟用户)</span>"
+  },
+  "pages.home.hardware.title": {
+    "string": "给你的加密资产套上金钟罩"
+  },
+  "pages.home.hero.desc": {
+    "string": "难以置信的好用，坚若磐石的安全。"
+  },
+  "pages.home.hero.download": {
+    "string": "免费下载"
+  },
+  "pages.home.hero.engineer.team": {
+    "string": "了解工程师团队"
+  },
+  "pages.home.hero.more": {
+    "string": "如果你不能确保自己有足够的知识储备应付复杂的去中心化世界， <br></br> 一个靠谱的工具能帮你少走许多弯路。"
+  },
+  "pages.home.hero.privacy.guarantee": {
+    "string": "我们不会通过你的数据隐私获利或分享给任何第三方，了解我们的<a>隐私政策</a>."
+  },
+  "pages.home.hero.title": {
+    "string": "<span>更受用户信赖的</span><strong>加密货币钱包</strong>"
+  },
+  "pages.home.hero.welcome": {
+    "string": "我们正在招人"
+  },
+  "pages.home.payment.advantage1.desc": {
+    "string": "你可以独立使用 OneKey App 来安全的存储、使用你的加密资产。我们经过谨慎的安全考量，使用了业界领先的加密算法，确保每个用户的资产都能妥善的加密并保管在本地。"
+  },
+  "pages.home.payment.advantage1.title": {
+    "string": "手机钱包可独立使用"
+  },
+  "pages.home.payment.advantage2.desc": {
+    "string": "硬件钱包能够将你的资产安全提升到新的等级，从物理上隔绝黑客、木马、病毒软件的攻击，所有的转账操作都要经过硬件钱包的审核，不用担心手机遗失或被窃。"
+  },
+  "pages.home.payment.advantage2.title": {
+    "string": "配合硬件钱包更安全"
+  },
+  "pages.home.payments.description": {
+    "string": "再也不等待漫长的「提币审核」，你自己的加密资产，想什么做都可以。"
+  },
+  "pages.home.payments.title": {
+    "string": "自己掌握私钥，痛快呼吸。"
+  },
+  "pages.home.reviews.item1.description": {
+    "string": "区块链金融正在席卷而来，链上操作和交互日益频繁，作为区块链人，非常需要一个安全的盾牌和进攻的利器，我在整个DeFi 进程中选择的是 OneKey。"
+  },
+  "pages.home.reviews.item1.label": {
+    "string": "DeFi"
+  },
+  "pages.home.reviews.item1.professional.title": {
+    "string": "资深区块链专家·去中心化金融践行者"
+  },
+  "pages.home.reviews.item1.title": {
+    "string": "DeFi 挖矿用 OneKey"
+  },
+  "pages.home.reviews.item1.username": {
+    "string": "超级君"
+  },
+  "pages.home.reviews.item2.description": {
+    "string": "OneKey出自一群深耕比特币多年的专业人士之手，在安全性和操作体验上都做得非常出色。相比之下，它优雅的外观已经不值一提了。"
+  },
+  "pages.home.reviews.item2.label": {
+    "string": "比特币"
+  },
+  "pages.home.reviews.item2.professional.title": {
+    "string": "早期比特币布道者"
+  },
+  "pages.home.reviews.item2.title": {
+    "string": "囤币用 OneKey"
+  },
+  "pages.home.reviews.item2.username": {
+    "string": "熊越"
+  },
+  "pages.home.reviews.item3.description": {
+    "string": "<p>囤币多年，涨跌看淡。</p><p> 从使用 Bitcoin Qt，到入手 OneKey，靠谱的人打磨出靠谱的产品，我要再囤500年。 </p>"
+  },
+  "pages.home.reviews.item3.label": {
+    "string": "Holder"
+  },
+  "pages.home.reviews.item3.professional.title": {
+    "string": "资深比特币玩家"
+  },
+  "pages.home.reviews.item3.title": {
+    "string": "从 Bitcoin Qt 到 OneKey"
+  },
+  "pages.home.reviews.item3.username": {
+    "string": "朱靖"
+  },
+  "pages.home.reviews.opinion": {
+    "string": "用户的声音"
+  },
+  "pages.home.reviews.opinion.title": {
+    "string": "听听他们如何评价我们的钱包"
+  },
+  "pages.home.statistic.assets": {
+    "developer_comment": "请保留span, strong等标签",
+    "string": "<span>保管资产</span><strong>$2B+</strong>"
+  },
+  "pages.home.statistic.description": {
+    "string": "和我们的用户一起成长"
+  },
+  "pages.home.statistic.opensource": {
+    "developer_comment": "请保留span, strong等标签",
+    "string": "<span>代码开源</span><strong>100%</strong>"
+  },
+  "pages.home.statistic.title": {
+    "string": "备受信赖的钱包"
+  },
+  "pages.home.statistic.usedby": {
+    "developer_comment": "请保留span, strong等标签",
+    "string": "<span>国家或地区的用户</span><strong>80个</strong>"
+  },
+  "pages.home.testimonials.title": {
+    "string": "“私钥不掌控在自己手里，币就永远不是你的。我们的任务是创造世界一流的工具，让所有加密资产爱好者能够长期、放心、安全地管理和使用他们的资产。”"
+  },
+  "pages.home.testimonials.username": {
+    "string": "王一石"
+  },
+  "pages.home.title": {
+    "string": "OneKey - Trusted Cryptocurrency Wallet | For Bitcoin, Ethereum and more."
+  },
+  "pages.team.join.city.beijing": {
+    "string": "北京"
+  },
+  "pages.team.join.city.cs": {
+    "string": "长沙"
+  },
+  "pages.team.join.city.remote": {
+    "string": "Remote（全世界都可以）"
+  },
+  "pages.team.join.fringe.benefit": {
+    "string": "福利待遇"
+  },
+  "pages.team.join.jobs": {
+    "string": "工作"
+  },
+  "pages.team.join.jobs.labale1": {
+    "string": "弹性工作时间"
+  },
+  "pages.team.join.jobs.labale2": {
+    "string": "周末双休（虽然本就是应该的但是还是注明下）"
+  },
+  "pages.team.join.jobs.labale3": {
+    "string": "公司提供中、晚饭（如果在北京 Office ）"
+  },
+  "pages.team.join.jobs.labale4": {
+    "string": "不限量的零食饮料"
+  },
+  "pages.team.join.jobs.labale5": {
+    "string": "每周体育中心包场篮球、羽毛球等锻炼项目"
+  },
+  "pages.team.join.join.us": {
+    "string": "加入我们"
+  },
+  "pages.team.join.others": {
+    "string": "额外"
+  },
+  "pages.team.join.others.label1": {
+    "string": "Remote Okay"
+  },
+  "pages.team.join.others.label2": {
+    "string": "团队 Bonus 激励"
+  },
+  "pages.team.join.others.label3": {
+    "string": "Token 或期权（如果有）"
+  },
+  "pages.team.join.salary": {
+    "string": "薪资"
+  },
+  "pages.team.join.salary.label1": {
+    "string": "一线大厂水平（可选 BTC）"
+  },
+  "pages.team.join.salary.label2": {
+    "string": "全配 MBP 及 4K 显示器"
+  },
+  "pages.team.join.salary.label3": {
+    "string": "五险一金"
+  },
+  "pages.team.join.salary.label4": {
+    "string": "带薪年假"
+  },
+  "pages.team.join.salary.label5": {
+    "string": "商业体检"
+  },
+  "pages.team.join.send.email": {
+    "string": "发送简历邮件至 hi[at] oeneky.so"
+  },
+  "pages.team.join.team": {
+    "string": "团队"
+  },
+  "pages.team.join.team.label1": {
+    "string": "强工程师文化，团队工程师占比 90%以上"
+  },
+  "pages.team.join.team.label2": {
+    "string": "项目完全开源"
+  },
+  "pages.team.join.team.label3": {
+    "string": "我们同时做软件和硬件"
+  },
+  "pages.team.join.welcome": {
+    "string": "所有岗位开放，包括技术与非技术"
+  },
+  "pages.team.testimonials.subcontent": {
+    "string": "比特币的最大价值，在于它首次用技术手段保证了私有财产的不可侵犯。而对普通人来说，离开一个安全、可靠的硬件钱包，这一点的意义将大打折扣。"
+  },
+  "pages.team.testimonials.xy": {
+    "string": "熊越"
+  },
+  "pages.team.testimonials.xy.title": {
+    "string": "比特币早期布道者"
+  },
+  "pages.teams.members.title": {
+    "string": "我们致力于成为加密货币行业的基础设施与管道"
+  },
+  "pages.teams.testimonials.chaoji.name": {
+    "string": "超级君"
+  },
+  "pages.teams.testimonials.content": {
+    "string": "<p>我们向陌生的时空问好，是坦然让自己融入时空，希望未来温柔相待，藏着美好的期盼，从容而欢欣。我们也向陌生人问好，摊开心怀，握手碰肩，欣喜此时的初识，也期待下一次的重逢，让彼此的岁月多几回交集。</p><p>我们也向美好的陌生科技产品问好，无论是3D打印、基因排序，还是虚拟现实，它们正穿过黑暗的懵懂心智，在智慧烛光的观照中沿着人类想象力的边界走向大众生活。此时，更向比特币问好，一纸协议，抖擞着人类关乎自由货币的向往。这是它问世的第七个年头，欢迎其走进你我生命的历程，在岁月中合拍共谱，滋养而丰富，有所求也有所担当。比特文明的盗火者已归隐，我们是互联网金融新秩序的传道士，受自由意志的指引，怀着延续的烛光，四下穿梭黑暗森林、穿过传销绍泽，更是只身拍马走过乌托邦荒原。</p><p> 时间长河里，新年的跨越或许真是小舟承载，向另一小舟的转运。回味比特币走过的其中历程，甘苦与共之时，应当超脱出欣然。</p><p>这一年，以美国为首的更多国家对比特币持开明态度。</p><p> 这一年更多的人群使用比特币，享受比特币带来的便利和福泽；这一年，比特币算力盾牌更佳强固，突破1000亿次，回想2013年有少年因担心其系统的脆弱性而不断“早安比特币”、“晚安比特币”。</p><p>这一年，比特币从大宗商品阴跌的大局势中脱颖而出，而价从年头到年末上涨数倍，成为投资品的异军，重获全球投资者的眼光。固然，这远非我们的追求。</p><p>此刻莞尔，不可思议。</p><p> 这是一个最简单的协议，是互联网价值传递的本源。世相繁复，纵使有更多的质疑、利益自卫和诱惑抵抗，比特币的发展之路，也会遇到许多那样的人，他们接触比特币时，会如同奥雷良诺布恩地亚上校少年时第一次摸到冰块产生巨大的震撼。无意与这个世界的金融秩序抵抗，只是自由追求同时也能有一条名为比特币的金融秩序的选择。</p><p>作为比特币的从业者，这一年有寒冬萧瑟意，也有争议分裂痕。然而无论光或痕，在比特币轰然前开的革命中只是细枝末节。这一年深度思索上帝的手，洞悉宇宙语言，放弃虚无的神权，也厌倦威权的压迫，选择比特币这一数学协议作为全部财富安放的方式。</p>"
+  },
+  "pages.teams.testimonials.hello.btc": {
+    "string": "你好，比特币。"
+  },
+  "pages.teams.testimonials.preface": {
+    "string": "我们在时光的列车上不断探出头，习惯地对每一个新年问好，“你好， 2009， 2013，2016，2020！＂若有全球巡游列车，我们大概也会如此，每到一个新的国度就探出头，大声问好， “你好，美国、法国、德国！＂"
+  }
+}

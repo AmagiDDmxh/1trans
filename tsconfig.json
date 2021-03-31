@@ -3,12 +3,17 @@
     "module": "commonjs",
     "target": "es2020",
     "lib": [
-      "es2020"
+      "dom",
+      "es2020",
+      "es2020.string",
     ],
+    "moduleResolution": "Node",
     "noImplicitAny": true,
+    "esModuleInterop": true,
     "strictNullChecks": true,
     "declaration": true,
     "sourceMap": false,
+    "resolveJsonModule": true,
     "outDir": "dist"
   },
   "files": [
