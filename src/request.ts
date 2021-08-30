@@ -1,16 +1,12 @@
 import axios, { AxiosInstance } from "axios";
+import FormData from 'form-data'
 import { DEEPL_API_URL, LANGUAGES } from "./constants";
 import { log } from "./utils";
 
-// Use for testing
-import dotenv from "dotenv";
-dotenv.config();
-const { DEEPL_API_TOKEN } = process.env;
-
 export interface TranslateParams {
   text: string;
+  to: string;
   from?: string;
-  to?: string;
   // rest...
 }
 
@@ -26,7 +22,6 @@ export interface Translation {
 const HEADERS = {
   Connection: "keep-alive",
   Accept: "*/*",
-  "User-Agent": "YourApp",
 };
 
 export default class Requester {
@@ -38,20 +33,11 @@ export default class Requester {
 
     this.instance = axios.create({
       ...config,
-      headers: HEADERS,
+      headers: {
+        ...HEADERS,
+        Authorization: `DeepL-Auth-Key ${token}`
+      },
       proxy: false,
-    });
-    // Add auth token
-    this.instance.interceptors.request.use((config) => {
-      const authorizedData = {
-        ...config.params,
-        auth_key: token,
-      };
-
-      return {
-        ...config,
-        params: authorizedData,
-      };
     });
   }
 
@@ -60,17 +46,30 @@ export default class Requester {
     from,
     to,
   }: TranslateParams): Promise<TranslationResponse | undefined> => {
-    const data = {
-      text: text,
-      source_lang: from,
-      target_lang: to,
-    };
+    const formData = new FormData()
+    formData.append('text', text)
+    formData.append('target_lang', to)
+    if (from) {
+      formData.append('source_lang', from)
+    }
+
+    // const data = {
+    //   text,
+    //   target_lang: to,
+    //   source_lang: from
+    // }
 
     try {
-      const response = await this.instance.get(`${DEEPL_API_URL}/translate`, {
-        params: data,
-      });
-
+      const response = await this.instance.post(
+        `${DEEPL_API_URL}/translate`,
+        formData,
+        {
+          headers: {
+            ...this.instance.defaults.headers,
+            ...formData.getHeaders()
+          }
+        }
+      );
       return response.data;
     } catch (e) {
       // log("ERROR on translating text", text);
@@ -78,7 +77,7 @@ export default class Requester {
       // log("ERROR", errorKeys);
       if (e.hasOwnProperty("response")) {
         const result = e.toJSON();
-        log(Object.keys(e.response));
+        // log(Object.keys(e.response));
         log("response:", result, result.message);
       }
     }
@@ -93,8 +92,14 @@ export default class Requester {
     }
   };
 
-  getAvailableLanguages = async () => {};
+  getAvailableLanguages = async () => { };
 }
+
+
+// Use for testing only
+// import dotenv from "dotenv";
+// dotenv.config();
+// const { DEEPL_API_TOKEN } = process.env;
 
 // const requester = new Requester(DEEPL_API_TOKEN!);
 // requester
@@ -102,7 +107,7 @@ export default class Requester {
 //     text: `额度低于最小值 ({dust}),l1
 //   有足够的 {symbol} 来支付交易费用,l3`,
 //     from: LANGUAGES.chinese,
-//     to: LANGUAGES.englishAmerican,
+//     to: LANGUAGES.english,
 //   })
 //   .then(log)
 //   .catch(log);
