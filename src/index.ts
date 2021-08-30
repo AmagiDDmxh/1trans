@@ -1,16 +1,18 @@
-import fs from "fs";
+import fs from "fs-extra";
+import { join } from 'path'
 import dotenv from "dotenv";
+import { program } from 'commander'
 
-import { isCn, log, mapObject } from "./utils";
-import Requester from "./request";
-import { LANGUAGES } from "./constants";
+import { log, } from "./utils";
+import Requester, { Translation } from "./request";
+import { LangVal, LANGUAGES, LangKey } from "./constants";
 
 dotenv.config();
 
 const { DEEPL_API_TOKEN } = process.env;
 
 if (!DEEPL_API_TOKEN) {
-  throw Error("No token was specified");
+  throw new Error("No token was specified, place your DEEPL_API_TOKEN token in .env file.");
 }
 
 const requester = new Requester(DEEPL_API_TOKEN);
@@ -25,21 +27,35 @@ type TranslationInput =
 interface TransformParams {
   translationsToCompare?: TranslationInput;
   translations: TranslationInput;
-  from: string;
-  to: string;
+  from?: LangVal;
+  to: LangVal;
   output?: boolean;
+}
+
+/**
+ * 把 value 粘合在一起
+ * ['a', 'b', 'c'] => 'a\n.\nb\n.\nc'
+ */
+export const glueStrings = (strings: Array<string>) => {
+  const stringsToTranslate: string[] = [];
+
+  strings.forEach((str) => {
+    const escapedStr = str.replace('{', '\\{').replace('}', '\\}')
+    stringsToTranslate.push(escapedStr);
+  });
+
+  return stringsToTranslate.join("\n.\n");
 }
 
 const transform = async ({
   translations,
-  translationsToCompare,
   from,
   to,
   output,
 }: TransformParams) => {
   const keys = Object.keys(translations);
   const values = Object.values(translations);
-  // Formatting
+
   const strings: string[] = values.map((val) => {
     if (val.string) {
       return val.string;
@@ -47,42 +63,7 @@ const transform = async ({
     return val;
   });
 
-  // Comparing
-  let stringsToTranslate: { value: string; index: number }[] = [];
-
-  // Single file, determined
-  if (!translationsToCompare) {
-    strings.forEach((str, index) => {
-      // TODO: Add more language support
-      // Here do the source language detection
-      if (isCn(str)) {
-        // translate it
-        // const normalized
-        const translatedStr = { value: str, index };
-        stringsToTranslate.push(translatedStr);
-        return translatedStr;
-      }
-      return { value: str, index };
-    });
-  } else {
-    compare(translations, translationsToCompare, )
-  }
-
-  const stringifyedTranslations = stringsToTranslate
-    .map(({ value, index }) => `[${index}] ${value}`)
-    .join("||");
-
-  // log(stringifyedTranslations);
-
-  stringifyedTranslations.split("||").map((str) => {
-    const REGEX_INDEX_SEP = /\[(\d+)\]\s/;
-    const matches = str.match(REGEX_INDEX_SEP);
-    if (!matches) {
-      return str;
-    }
-    const [placeholder, indexStr] = matches;
-    return str.slice(placeholder.length);
-  });
+  const stringifyedTranslations = glueStrings(strings)
 
   log("Start requesting API");
 
@@ -94,10 +75,17 @@ const transform = async ({
 
   log("Response with", response);
 
-  // const translatedStrings: TranslationResponse[] = response.translations;
+  if (!response) {
+    return log("Non response provided, check if is network problem");
+  }
+
+  const translatedStrings: Translation[] = response.translations;
+  log(translatedStrings)
+
+  fs.writeFileSync(join(__dirname, `../temp-${Date.now()}.response`), JSON.stringify(translatedStrings))
 
   // translatedStrings.forEach(({ text }) => {
-  //   const matches = text.match(/,?\s?i[0-9]+$/);
+  //   const matches = text.match(/\s?ð(\d+)ð\s?\.?/);
   //   if (!matches) {
   //     log("no match on", text);
   //     return;
@@ -131,33 +119,58 @@ const transform = async ({
   // return translatedTranslations;
 };
 
-(async () => {
-  const input = process.argv[2];
+const isSuppoortedFileFormat = (translation?: any | null) => typeof Object.values(translation ?? {})?.[0] === "string";
 
-  if (input && fs.existsSync(input)) {
-    log("Reading input", input);
-    const jsonString = fs.readFileSync(input).toString();
-    try {
-      log("Start formatting");
-      const jsonFile = JSON.parse(jsonString);
-      let normalizedTranslations = jsonFile;
-      // format
-      if (typeof Object.values(normalizedTranslations)[0] === "string") {
-        normalizedTranslations = mapObject(jsonFile, (v: string) => ({
-          string: v,
-        })) as Record<string, TranslationString>;
-      }
-      log("Translating...");
-      const result = await transform({
-        translations: normalizedTranslations,
-        from: LANGUAGES.chinese,
-        to: LANGUAGES.englishAmerican,
-        output: true,
-      });
-      // log("Done!");
-      log(result);
-    } catch (e) {
-      log("Unable to parse json file!", e);
-    }
+type Options = { target: LangVal | LangKey; source?: LangKey; format?: string }
+const main = async (inputFile: string, outputFile: string, options: Options) => {
+  const { target, source } = options
+
+  if (!LANGUAGES[target as LangKey] || !Object.values(LANGUAGES).includes(target as LangVal)) {
+    throw new Error("Unsupported target language. Visit https://www.deepl.com/docs-api/translating-text/#Request%20Parameters to see what languages are supported.")
   }
-})();
+
+  if (!fs.existsSync(inputFile)) {
+    throw new Error("Add your input file as 3rd argument: CLI-NAME <input-file>")
+  }
+
+  log("Reading input", inputFile);
+  const jsonString = fs.readFileSync(inputFile).toString();
+  try {
+    log("Start formatting");
+    const jsonFile = JSON.parse(jsonString);
+    // format
+    if (!isSuppoortedFileFormat(jsonFile)) {
+      throw new Error("Onlu key-value paired JSON format is supported!")
+    }
+
+    log("Translating...");
+
+    const result = await transform({
+      translations: jsonFile,
+      from: source ? LANGUAGES[source] : undefined,
+      to: LANGUAGES[target as LangKey] || target,
+      output: true,
+    });
+    log(result);
+  } catch (e) {
+    log("Unable to parse json file with error", e);
+  }
+};
+
+
+const version = require('../package.json').version
+
+program
+  .version(version, '-v, --version')
+  .argument('<inputFile>', 'File to translate')
+  .argument('[outputFile]', 'Specify where to output, defaults = <inputFile>-<locale>.json')
+  .option('-f, --format <format>', 'File format of input translation file, only key-value JSON is supported...')
+  .option('-s, --source <lang>', 'Source language, defaults = auto. Visit https://www.deepl.com/docs-api/translating-text/#Request%20Parameters for supported languages.')
+  .requiredOption('-t, --target <lang>', 'Target language, required. Visit https://www.deepl.com/docs-api/translating-text/#Request%20Parameters for supported languages.')
+  .action(main)
+
+if (process.argv.length < 3) {
+  program.help()
+} else {
+  program.parse(process.argv)
+}
