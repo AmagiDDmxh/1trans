@@ -8,7 +8,7 @@ export const log = console.log.bind(console);
 
 export const keys = Object.keys;
 
-export const mapObject = (obj: any, fn: Function) => {
+export const mapObject = <T, O>(obj: any, fn: (v: T) => O) => {
   return keys(obj).reduce(
     (acc, key) => ({
       ...acc,
