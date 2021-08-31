@@ -20,6 +20,16 @@ export const mapObject = <T, O>(obj: any, fn: (v: T) => O) => {
   );
 };
 
+export const findLanguageShortcut = (nameString: string) => {
+  const key = Object.keys(LANGUAGES).find(k => nameString.includes(k)) as LangKey
+
+  if (key) {
+    return LANGUAGES[key]
+  }
+
+  return Object.values(LANGUAGES).find(v => nameString.includes(v))
+}
+
 interface CreateOutputPathArgs {
   to: string
   from?: string
