@@ -1,0 +1,7 @@
+{
+  "hello_world": "Hello World!",
+  "with_bracket": "Balance: { balanceInput }",
+  "with_angle_bracket": "<1>value</1>",
+  "with_html_tag": "a <strong>value</strong>",
+  "UPPER_KEY_SHOULD_REMAIN": "yup!"
+}
