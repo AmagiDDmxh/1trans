@@ -1,3 +1,21 @@
-## Scaffold for TypeScript npm modules
+# Translator
 
-Just clone and edit package.json / tsconfig.json to taste.
+A DeepL translator script
+
+## How to use
+
+Use the script locally.
+
+```bash
+git clone https://github.com/AmagiDDmxh/translator
+cd translator
+yarn
+# 复制 env，编辑 'DEEPL_API_TOKEN=' 属性为 DeepL API token
+cp .env.example .env
+
+# 尝试翻译 test-en.json 中文 翻译好的文件会输出到 `output/test-zh.json`
+yarn start test-en.json -t zh
+
+# 尝试翻译 input.json 德语
+yarn start input.json -t de
+```
