@@ -1,5 +1,5 @@
 import fs from "fs-extra";
-import { join } from 'path'
+import { join, parse, resolve } from 'path'
 import dotenv from "dotenv";
 import { program } from 'commander'
 import { red, cyan } from 'colors'
@@ -97,14 +97,14 @@ const transform = async ({
     finalJSON[key] = values[index]
   })
 
-  const outputFilePath = join(OUTPUT_PATH, output)
-  log(`Writting file to ${outputFilePath}`)
+  const outputPathObj = parse(output)
 
-  if (!fs.existsSync(OUTPUT_PATH)) {
-    fs.mkdirSync(OUTPUT_PATH);
-  }
+  const { dir, base } = outputPathObj
+  const outputPath = resolve(dir, base)
+  log(`Writting file to ${outputPath}`)
 
-  fs.writeFileSync(outputFilePath, JSON.stringify(finalJSON, null, 2))
+  fs.ensureDirSync(resolve(dir))
+  fs.writeFileSync(outputPath, JSON.stringify(finalJSON, null, 2))
 
   log("Translation done!")
 };
