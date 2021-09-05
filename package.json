@@ -3,10 +3,16 @@
   "version": "0.0.1",
   "description": "Translate transifex translations using DeepL API",
   "main": "dist/index.js",
-  "typings": "dist/index",
+  "typings": "dist/index.d.ts",
   "scripts": {
-    "start": "ts-node ./src/index.ts",
+    "start": "npm run build && npm run global",
+    "build": "npm run clean:some && tsc -p .",
+    "global": "npm i -g && one-trans",
+    "clean:some": "rm -rf ./dist",
     "test": "ava"
+  },
+  "bin": {
+    "one-trans": "bin/index.js"
   },
   "ava": {
     "extensions": {
