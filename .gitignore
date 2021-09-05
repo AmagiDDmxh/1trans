@@ -36,11 +36,14 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+# Playground for testing
+playground
 # Code output
 dist
 # Translation output
 output/*
 input/*
+
 
 #tests are typescript
 test/*js
