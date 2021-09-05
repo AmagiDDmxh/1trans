@@ -4,6 +4,15 @@ A DeepL translator script
 
 ## How to use
 
+Using nodejs as runtime.
+
+```bash
+npm i -g @onekey/1trans
+
+# Translate test-en.json to Chinease
+DEEPL_API_TOKEN=[your deepl token] && 1trans ./test-en.json -t zh
+```
+
 Use the script locally.
 
 ```bash
