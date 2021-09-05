@@ -2,6 +2,7 @@ import fs from "fs-extra";
 import { join } from 'path'
 import dotenv from "dotenv";
 import { program } from 'commander'
+import { red, cyan } from 'colors'
 
 import { createOutputPath, log, } from "./utils";
 import Requester, { Translation } from "./request";
@@ -12,7 +13,9 @@ dotenv.config();
 const { DEEPL_API_TOKEN } = process.env;
 
 if (!DEEPL_API_TOKEN) {
-  throw new Error("No token was specified, place your DEEPL_API_TOKEN token in .env file.");
+  log(red("No deepl token was specified, declare your token in env DEEPL_API_TOKEN in order to use one-trans. e.g. "));
+  log(cyan("\"DEEPL_API_TOKEN=xxx && one-trans\""));
+  process.exit(1)
 }
 
 const requester = new Requester(DEEPL_API_TOKEN);
@@ -101,7 +104,7 @@ const transform = async ({
     fs.mkdirSync(OUTPUT_PATH);
   }
 
-  fs.writeFileSync(outputFilePath, JSON.stringify(finalJSON,null, 2))
+  fs.writeFileSync(outputFilePath, JSON.stringify(finalJSON, null, 2))
 
   log("Translation done!")
 };
@@ -114,12 +117,14 @@ const main = async (inputFile: string, outputFile: string, options: Options) => 
 
   if (!LANGUAGES[target as LangKey]) {
     if (!Object.values(LANGUAGES).includes(target as LangVal)) {
-      throw new Error("Unsupported target language. Visit https://www.deepl.com/docs-api/translating-text/#Request%20Parameters to see what languages are supported.")
+      log(red("Unsupported target language. Visit https://www.deepl.com/docs-api/translating-text/#Request%20Parameters to see what languages are supported."))
+      process.exit(1)
     }
   }
 
   if (!fs.existsSync(inputFile)) {
-    throw new Error("Add your input file as 3rd argument: CLI-NAME <input-file>")
+    log(red("Add your input file as 3rd argument: CLI-NAME <input-file>"))
+    process.exit(1)
   }
 
   log("Reading input", inputFile);
@@ -129,7 +134,8 @@ const main = async (inputFile: string, outputFile: string, options: Options) => 
     const jsonFile = JSON.parse(jsonString);
     // format
     if (!isSuppoortedFileFormat(jsonFile)) {
-      throw new Error("Onlu key-value paired JSON format is supported!")
+      log(red("Onlu key-value paired JSON format is supported!"))
+      process.exit(1)
     }
 
     log("Translating...");
@@ -150,9 +156,13 @@ const main = async (inputFile: string, outputFile: string, options: Options) => 
 
 
 // Main entry
-const version = require('../package.json').version
+const packageJson = require('../package.json')
+const { version, name } = packageJson
+
+log(cyan("Thanks for using one-trans.\nMade with ❤️ and 🔥 by OneKey team.\nTo learn more about us, visit our website at https://onekey.so/\n"))
 
 program
+  .name(name)
   .version(version, '-v, --version')
   .argument('<inputFile>', 'File to translate')
   .argument('[outputFile]', 'Specify where to output, defaults = <inputFile>-<locale>.json')
