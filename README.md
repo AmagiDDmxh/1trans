@@ -9,8 +9,8 @@ Using nodejs as runtime.
 ```bash
 npm i -g @onekey/1trans
 
-# Translate test-en.json to Chinease
-DEEPL_API_TOKEN=[your deepl token] && 1trans ./test-en.json -t zh
+# Translate test-en.json to Chinease and output as `./output-zh.json`
+DEEPL_API_TOKEN=[your deepl token] && 1trans ./test-en.json ./output-zh.json -t zh
 ```
 
 Use the script locally.
