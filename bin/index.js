@@ -1,1 +1,2 @@
-require('../src/cli').default(process.argv)
+#!/usr/bin/env node
+require('../dist/index.js')
