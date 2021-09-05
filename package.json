@@ -9,6 +9,7 @@
     "build": "npm run clean:some && tsc -p .",
     "global": "npm i -g && 1trans",
     "clean:some": "rm -rf ./dist",
+    "refresh": "rm -rf ./node_modules ./yarn-lock.json && yarn",
     "test": "ava"
   },
   "bin": {
