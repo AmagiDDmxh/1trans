@@ -1,5 +1,5 @@
 {
-  "name": "@onekeyhq/1trans",
+  "name": "@onekey/1trans",
   "version": "0.0.2",
   "description": "Translate transifex translations using DeepL API",
   "main": "dist/index.js",
@@ -49,5 +49,15 @@
     "dotenv": "^8.2.0",
     "form-data": "^4.0.0",
     "fs-extra": "^10.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmagiDDmxh/1trans.git"
+  },
+  "keywords": [
+    "translator",
+    "deepl",
+    "onekey",
+    "cli"
+  ]
 }
