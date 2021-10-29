@@ -115,8 +115,11 @@ type Options = { target: LangVal | LangKey; source?: LangKey; format?: string }
 const main = async (inputFile: string, outputFile: string, options: Options) => {
   const { target, source } = options
 
-  if (!LANGUAGES[target as LangKey]) {
-    if (!Object.values(LANGUAGES).includes(target as LangVal)) {
+  const normalizedTarget = target.toLowerCase() as LangKey
+  const normalizedSource = source?.toLowerCase() as (LangKey | undefined)
+
+  if (!LANGUAGES[normalizedTarget]) {
+    if (!Object.values(LANGUAGES).includes(normalizedTarget as LangVal)) {
       log(red("Unsupported target language. Visit https://www.deepl.com/docs-api/translating-text/#Request%20Parameters to see what languages are supported."))
       process.exit(1)
     }
@@ -140,7 +143,7 @@ const main = async (inputFile: string, outputFile: string, options: Options) => 
 
     log("Translating...");
     const to = LANGUAGES[target as LangKey] || target
-    const from = source ? LANGUAGES[source] : undefined
+    const from = normalizedSource ? LANGUAGES[normalizedSource] : undefined
     const output = outputFile ?? createOutputPath({ inputFile, from, to })
 
     await transform({
