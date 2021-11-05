@@ -19,7 +19,6 @@ if (!DEEPL_API_TOKEN) {
 }
 
 const requester = new Requester(DEEPL_API_TOKEN);
-const OUTPUT_PATH = join(__dirname, '../output')
 
 interface TranslationString {
   string: string;
