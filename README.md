@@ -28,3 +28,11 @@ yarn start test-en.json -t zh
 # 尝试翻译 input.json 德语
 yarn start input.json -t de
 ```
+
+## TODO
+
+- [ ] Add placeholder supports
+  - [ ] [%s]
+  - [ ] [%d]
+  - [ ] HTML Tag </>
+  - [ ] format \{aaa\}
