@@ -25,8 +25,10 @@ interface TranslationString {
   string: string;
 }
 
+type StructuredRecord = Record<string, TranslationString>
+
 type TranslationInput =
-  | Record<string, TranslationString>
+  | StructuredRecord
   | Record<string, string>;
 interface TransformParams {
   translationsToCompare?: TranslationInput;
@@ -36,17 +38,27 @@ interface TransformParams {
   output: string;
 }
 
+const UNSUPPORTED_TEXT_REGEX = [
+  // With '{...}' insde
+  /\{(.*).+\}/,
+  // With '<...>' inside
+  /\<([^\s])+\>/,
+  // With '[...]' inside
+  /\[[^\s]\]/,
+]
+
+const isUntranslable = (text: string) => {
+  return UNSUPPORTED_TEXT_REGEX.some(regex => regex.test(text))
+}
+
 /**
  * 把 value 粘合在一起
  * ['a', 'b', 'c'] => 'a\n.\nb\n.\nc'
  */
 export const glueStrings = (strings: Array<string>) => {
-  const stringsToTranslate: string[] = strings.map((str) => {
-    if (/\{(.*).+\}/.test(str)) return '';
-    if (/\<([^\s])+\>/.test(str)) return '';
-
-    return str;
-  });
+  const stringsToTranslate: string[] = strings.map(
+    (str) => isUntranslable(str) ? '' : str
+  );
 
   return stringsToTranslate.join("\n.\n");
 }
@@ -57,17 +69,16 @@ const transform = async ({
   to,
   output,
 }: TransformParams) => {
-  const keys = Object.keys(translations);
-  const values = Object.values(translations);
+  const normarlizedTranslations: Record<string, string> = Object.keys(translations)
+    .filter((key) => (translations[key] as TranslationString).string || typeof translations[key] === 'string')
+    .reduce((acc, key) => ({
+      ...acc,
+      [key]: (translations[key] as TranslationString).string ?? translations[key]
+    }), {})
+  const keys = Object.keys(normarlizedTranslations);
+  const values = Object.values(normarlizedTranslations) as string[];
 
-  const strings: string[] = values.map((val) => {
-    if (val.string) {
-      return val.string;
-    }
-    return val;
-  });
-
-  const stringifyedTranslations = glueStrings(strings)
+  const stringifyedTranslations = glueStrings(values)
 
   log("Start requesting API");
 
